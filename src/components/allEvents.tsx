@@ -14,7 +14,7 @@ export function EventItem({
   color,
 }: TEventItemProps) {
   const colors = {
-    blue: "bg-blue-500",
+    blue: "bg-[#5E81F4]",
     yellow: "bg-yellow-500",
     green: "bg-green-500",
   } as const;

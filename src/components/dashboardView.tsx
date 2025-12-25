@@ -119,7 +119,7 @@ const metrics = [
     label: "Leads",
     sublabel: "Month comparison",
     value: "3,820",
-    color: "bg-blue-500",
+    color: "bg-[#5E81F4]",
   },
   {
     label: "Income",
@@ -166,39 +166,39 @@ export function DashboardView1() {
   return (
     <motion.div
       key="view1"
-      className="space-y-6"
+      className="space-y-4"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -20 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
       {/* Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {stats.map((stat) => (
           <StatCard key={stat.label} {...stat} />
         ))}
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {/* Orders Section */}
         <div className="col-span-1 bg-white rounded-xl ">
-          <div className="p-6 ">
+          <div className="p-4 ">
             <div className="flex items-center justify-between ">
               <h2 className="text-base md:text-lg font-semibold text-gray-900">
                 Orders
               </h2>
               <div className="flex gap-2">
-                <button className="md:flex hidden items-center px-3 justify-center h-10 text-sm text-gray-600 hover:text-gray-900">
+                <button className="md:flex hidden items-center px-3 justify-center h-9 text-sm text-gray-600 hover:text-gray-900">
                   Day
                 </button>
-                <button className="md:flex hidden items-center px-3 justify-center h-10 text-sm text-gray-600 hover:text-gray-900">
+                <button className="md:flex hidden items-center px-3 justify-center h-9 text-sm text-gray-600 hover:text-gray-900">
                   Week
                 </button>
-                <button className="md:flex hidden items-center px-3 justify-center h-10 text-sm font-medium  rounded-lg border border-gray-100">
+                <button className="md:flex hidden items-center px-3 justify-center h-9 text-sm font-medium  rounded-lg border border-gray-100">
                   Month
                 </button>
-                <button className="flex items-center w-10 justify-center h-10 text-sm font-medium  rounded-lg bg-[#F5F5FA] text-[#8181A5]">
+                <button className="flex items-center w-10 justify-center h-9 text-sm font-medium  rounded-lg bg-[#F5F5FA] text-[#8181A5]">
                   <CalendarDaysIcon className="size-4" />
                 </button>
               </div>
@@ -213,10 +213,10 @@ export function DashboardView1() {
             <OrderItem key={order.id} {...order} />
           ))}
 
-          <div className="p-6 flex gap-4 items-center">
+          <div className="p-4 flex gap-4 items-center">
             <button
               onClick={navigateToOrders}
-              className="w-max px-4 md:px-8 py-3 bg-[#5e81f4] text-white rounded-lg text-sm md:text-base md:font-medium hover:bg-[#2348c2] transition-colors"
+              className="w-max px-4 md:px-8 py-2 bg-[#5e81f4] text-white rounded-lg text-sm  md:font-medium hover:bg-[#2348c2] transition-colors"
             >
               All Orders
             </button>
@@ -228,20 +228,20 @@ export function DashboardView1() {
 
         {/* Invoices */}
         <div className="bg-white col-span-1 rounded-xl ">
-          <div className="p-6 ">
+          <div className="p-4 ">
             <div className="flex items-center justify-between">
               <h2 className="text-lg font-semibold text-gray-900">Invoices</h2>
               <div className="flex gap-2">
-                <button className="md:flex hidden px-3 items-center justify-center h-10 text-sm text-gray-600 hover:text-gray-900">
+                <button className="md:flex hidden px-3 items-center justify-center h-9 text-sm text-gray-600 hover:text-gray-900">
                   Day
                 </button>
-                <button className="md:flex hidden px-3 items-center justify-center h-10 text-sm text-gray-600 hover:text-gray-900">
+                <button className="md:flex hidden px-3 items-center justify-center h-9 text-sm text-gray-600 hover:text-gray-900">
                   Week
                 </button>
-                <button className="md:flex hidden px-3 items-center justify-center h-10 text-sm font-medium  rounded-lg border border-gray-100">
+                <button className="md:flex hidden px-3 items-center justify-center h-9 text-sm font-medium  rounded-lg border border-gray-100">
                   Month
                 </button>
-                <button className="flex items-center w-10 justify-center h-10 text-sm font-medium  rounded-lg bg-[#F5F5FA] text-[#8181A5]">
+                <button className="flex items-center w-10 justify-center h-9 text-sm font-medium  rounded-lg bg-[#F5F5FA] text-[#8181A5]">
                   <CalendarDaysIcon className="size-4" />
                 </button>
               </div>
@@ -258,7 +258,7 @@ export function DashboardView1() {
               className="flex items-center justify-between py-4 px-6 hover:bg-gray-50 min-h-20"
             >
               <div className="flex items-center gap-3">
-                <FileText className="md:size-10 size-9 text-blue-500" />
+                <FileText className="md:size-10 size-9 text-[#5E81F4]" />
                 <div className="max-w-24 md:max-w-none ">
                   <h4 className=" text-xs md:text-sm font-medium text-gray-900">
                     {invoice.number}
@@ -285,8 +285,8 @@ export function DashboardView1() {
             </div>
           ))}
 
-          <div className="p-6 flex gap-4 items-center">
-            <button className="w-max shrink-0 px-4 md:px-8 py-3 bg-[#5e81f4] text-white rounded-lg text-sm md:text-base md:font-medium hover:bg-[#2348c2] transition-colors">
+          <div className="p-4 flex gap-4 items-center">
+            <button className="w-max shrink-0 px-4 md:px-8 py-2 bg-[#5e81f4] text-white rounded-lg text-sm  md:font-medium hover:bg-[#2348c2] transition-colors">
               All Invoices
             </button>
             <p className="text-center text-sm text-gray-600 ">
@@ -320,11 +320,11 @@ export function DashboardView2() {
         <ArrowLeft className="w-4 h-4" />
       </button>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {metrics.map((metric, i) => (
           <div
             key={i}
-            className="bg-white flex flex-col rounded-xl p-6 border border-gray-200"
+            className="bg-white flex flex-col rounded-xl p-4 border border-gray-200"
           >
             <div className="flex justify-between">
               <div className="flex flex-col">
@@ -352,9 +352,9 @@ export function DashboardView2() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 bg-white rounded-xl 0 p-6">
-          <div className="flex items-center justify-between mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="lg:col-span-2 bg-white rounded-xl 0 p-4">
+          <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-semibold text-gray-900">Orders</h2>
             <div className="flex gap-2">
               <button className="px-3 py-1 cursor-pointer text-sm text-gray-600 hover:text-gray-900">
@@ -370,7 +370,7 @@ export function DashboardView2() {
           </div>
           <OrdersChart />
         </div>
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+        <div className="bg-white rounded-xl border border-gray-200 p-4">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">
             Planned Income
           </h2>
@@ -379,7 +379,7 @@ export function DashboardView2() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-200">
-        <div className="p-6 border-b border-gray-200">
+        <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-gray-900">
               Latest sales
@@ -491,7 +491,7 @@ export function DashboardView2() {
                   <AccordionTrigger className="hover:bg-gray-50 px-4 py-4 hover:no-underline items-center">
                     <div className="flex items-center gap-3 flex-1 min-w-0 text-left">
                       <div className="w-10 h-10 bg-linear-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center shrink-0">
-                        <Package className="w-5 h-5 text-blue-600" />
+                        <Package className="w-5 h-5 text-[#5E81F4]" />
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-sm font-medium text-gray-900 truncate">

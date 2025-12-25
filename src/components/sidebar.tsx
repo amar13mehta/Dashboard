@@ -91,9 +91,9 @@ function SidebarComponent() {
                   }`}
                 >
                   {activeItem === item.id && (
-                    <span className="absolute -right-2.5 top-1/2 -translate-y-1/2 h-10 w-0.5 bg-[#5E81F4]" />
+                    <span className="absolute -right-3.5 top-1/2 -translate-y-1/2 h-10 w-0.5 bg-[#5E81F4]" />
                   )}
-                  <Icon className="w-4.5 h-4.5" />
+                  <Icon className="w-3 h-3" />
                   {item.badge && isOpen && !isMobile && (
                     <span className="absolute -top-1 right-1 text-emerald-400 animate-pulse">
                       •
@@ -105,12 +105,12 @@ function SidebarComponent() {
           </nav>
         </div>
 
-        <div className="p-4">
+        <div className="p-3">
           <Image
             src="/logo.svg"
             alt="User"
-            width={40}
-            height={40}
+            width={36}
+            height={36}
             className="rounded-full"
           />
         </div>

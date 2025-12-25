@@ -7,7 +7,7 @@ import { useSidebarStore } from "../store/useSidebarStore";
 export function Header() {
   const toggle = useSidebarStore((s) => s.toggle);
   return (
-    <header className="h-16 w-full bg-white border-b border-gray-200 flex items-center justify-between px-6">
+    <header className="h-14 w-full bg-white border-b border-gray-200 flex items-center justify-between px-6">
       <div className="flex items-center gap-4">
         <button onClick={toggle} className="text-gray-600 hover:text-gray-900">
           <Menu className="w-6 h-6" />

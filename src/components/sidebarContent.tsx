@@ -53,7 +53,7 @@ export const SidebarContent = memo(function SidebarContent() {
           </button>
 
           <div className="flex items-start gap-4 flex-col">
-            <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center">
+            <div className="w-16 h-16 bg-[#5E81F4] rounded-4xl flex items-center justify-center">
               <span className="text-2xl font-bold text-white">C</span>
             </div>
             <div>
@@ -63,7 +63,7 @@ export const SidebarContent = memo(function SidebarContent() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Upcoming events</h3>
+            <h3 className="font-semibold mb-2">Upcoming events</h3>
             {events.map((event) => (
               <EventItem key={event.id} {...event} />
             ))}

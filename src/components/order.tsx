@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ImageIcon } from "lucide-react";
 
 type TOrderItemProps = {
   product: string;
@@ -26,7 +27,7 @@ export function OrderItem({
   return (
     <div className="flex items-center justify-between  py-4 px-6 hover:bg-gray-50 transition-colors">
       <div className="flex items-center gap-3 flex-1">
-        <Image
+        {/* <Image
           src={image}
           alt={product}
           width={48}
@@ -39,7 +40,11 @@ export function OrderItem({
           width={36}
           height={36}
           className="rounded-lg object-cover bg-gray-100 md:hidden block"
-        />
+        /> */}
+
+        <div className="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 text-xs">
+          IMG
+        </div>
         <div className="max-w-24 md:max-w-none">
           <h4 className="text-sm font-medium line-clamp-1 md:line-clamp-none text-gray-900 mb-1">
             {product}

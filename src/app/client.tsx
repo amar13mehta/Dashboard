@@ -17,8 +17,8 @@ function App() {
       <div className={`transition-all duration-300 w-full`}>
         <Header />
 
-        <ScrollArea className="flex-1 h-[calc(100%-64px)]">
-          <main className="p-6 w-full h-full bg-[#F5F5FA] min-h-[calc(100%-68px)]">
+        <ScrollArea className="flex-1 h-[calc(100%-58px)]">
+          <main className="p-4 w-full h-full bg-[#F5F5FA] min-h-[calc(100%-68px)]">
             <AnimatePresence mode="wait">
               {activeView === "OVERVIEW" ? (
                 <DashboardView1 key="overview" />
