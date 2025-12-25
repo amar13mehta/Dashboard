@@ -1,5 +1,5 @@
 # 🚀 Modern UI Dashboard
-## Check out :- [Dashboard](dashboard-carftui.vercel.app/)
+## Check out :- [Dashboard](https://dashboard-carftui.vercel.app/)
 
 A sleek, responsive UI Dashboard built with **Next.js** and **TypeScript**. This project focuses on clean design, fluid interactions, and scalable state management to provide a real-world admin experience.
 
