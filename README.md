@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Modern UI Dashboard
+
+A sleek, responsive UI Dashboard built with **Next.js** and **TypeScript**. This project focuses on clean design, fluid interactions, and scalable state management to provide a real-world admin experience.
+
+---
+
+## Features
+
+* **Interactive Dashboard Views:** Switch seamlessly between overview stats, orders, and invoices.
+* **Expandable Sidebar:** Managed via **Zustand** for a synchronized UI state.
+* **Responsive Analytics:** Dynamic line charts, area charts, and sparklines powered by **Recharts**.
+* **Mobile Optimized:** Responsive tables that transform into accordion layouts for smaller screens.
+* **Modern UI Components:** Built using **shadcn/ui** and styled with **Tailwind CSS**.
+* **Fluid Animations:** Smooth transitions powered by **Framer Motion**.
+
+---
+
+## Tech Stack
+
+| Category            | Technology        |
+| :------------------ | :---------------- |
+| **Framework** | Next.js 14/15     |
+| **Language** | TypeScript        |
+| **Styling** | Tailwind CSS      |
+| **Components** | shadcn/ui         |
+| **State Management**| Zustand           |
+| **Charts** | Recharts          |
+| **Animations** | Framer Motion     |
+| **Icons** | Lucide React      |
+
+---
+
+<img width="1915" height="878" alt="image" src="https://github.com/user-attachments/assets/9e824a2c-de97-4de8-b881-d31d6d295e6e" />
+
+---
+
+<img width="1918" height="878" alt="image" src="https://github.com/user-attachments/assets/6a74f603-2f24-4cc1-bb01-47c08c8bf536" />
+
+---
+
+<img width="485" height="783" alt="image" src="https://github.com/user-attachments/assets/ed1406f2-7c1d-4a76-80fc-7f96db1a8fe9" />
+
 
 ## Getting Started
 
-First, run the development server:
-
+### 1. Clone the repository
 ```bash
-npm run dev
+git clone https://github.com/amar13mehta/Dashboard
+cd your-repo-name
+
+2. Install dependencies
+Bash
+
+``npm install``
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+``yarn install``
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run
+Bash
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+``npm run dev``
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
