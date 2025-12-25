@@ -1,4 +1,5 @@
 # 🚀 Modern UI Dashboard
+## Check out :- [Dashboard](dashboard-carftui.vercel.app/)
 
 A sleek, responsive UI Dashboard built with **Next.js** and **TypeScript**. This project focuses on clean design, fluid interactions, and scalable state management to provide a real-world admin experience.
 
@@ -48,17 +49,16 @@ A sleek, responsive UI Dashboard built with **Next.js** and **TypeScript**. This
 git clone https://github.com/amar13mehta/Dashboard
 cd your-repo-name
 
-2. Install dependencies
+ 2. Install dependencies
 Bash
 
-``npm install``
-# or
-``yarn install``
+npm install
+# or`yarn install
 
-2. Run
+3. Run
 Bash
 
-``npm run dev``
+npm run dev
 
 
 
