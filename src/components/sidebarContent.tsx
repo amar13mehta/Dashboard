@@ -39,7 +39,7 @@ export const SidebarContent = memo(function SidebarContent() {
       {isOpen && (
         <motion.div
           key="sidebar-content"
-          className="w-80 px-6 py-8 space-y-8 bg-white h-screen absolute top-0 left-16 md:left-0 border-r border-gray-200 z-10 md:relative "
+          className="w-80 px-6 py-8 space-y-6 bg-white h-screen absolute top-0 left-16 md:left-0 border-r border-gray-200 z-10 md:relative "
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -8 }}
