@@ -38,8 +38,8 @@ const menuItems = [
 ];
 
 const sidebarWidth = {
-  open: { width: 472 }, // 16 + 96 * 4 = w-118 equivalent
-  closed: { width: 64 }, // w-16
+  open: { width: 472 },
+  closed: { width: 64 },
 };
 
 function SidebarComponent() {
@@ -49,7 +49,7 @@ function SidebarComponent() {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768); // 768px is Tailwind's md breakpoint
+      setIsMobile(window.innerWidth < 768);
     };
 
     checkScreenSize();
@@ -65,7 +65,6 @@ function SidebarComponent() {
       animate={isMobile ? "closed" : isOpen ? "open" : "closed"}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      {/* Icon rail */}
       <div className="w-16 h-full flex flex-col justify-between border-r border-gray-200">
         <div>
           <div className="flex items-center justify-center h-16 ">
@@ -117,7 +116,6 @@ function SidebarComponent() {
         </div>
       </div>
 
-      {/* Animated content */}
       <SidebarContent />
     </motion.div>
   );

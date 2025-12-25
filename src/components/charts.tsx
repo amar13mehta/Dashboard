@@ -5,21 +5,32 @@ import {
   LineChart,
   ResponsiveContainer,
   Tooltip,
-  TooltipProps,
   XAxis,
   YAxis,
 } from "recharts";
 import { ChartsData, invoiceData } from "../types/helperFunctions";
 import React, { useState } from "react";
 
-const CustomTooltip = ({ active, payload, label }: TooltipProps<any, any>) => {
-  if (!active || !payload || !payload.length) return null;
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: Array<{
+    value: number;
+    dataKey: string;
+    color: string;
+  }>;
+  label?: string;
+}
+
+const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
+  if (!active || !payload || payload.length === 0) return null;
+
+  const value = payload[0].value;
 
   return (
-    <div className="rounded-lg bg-white px-4 py-2 shadow-md text-sm">
-      <p className="text-gray-500 mb-1">{label}</p>
-      <p className="font-semibold text-gray-900">
-        ${payload[0].value.toLocaleString()}
+    <div className="rounded-md border bg-white p-2 shadow">
+      <p className="text-sm text-gray-600">{label}</p>
+      <p className="text-sm font-semibold text-black">
+        ₹{value.toLocaleString()}
       </p>
     </div>
   );

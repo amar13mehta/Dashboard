@@ -51,7 +51,7 @@ export const SidebarContent = memo(function SidebarContent() {
           >
             <XIcon className="size-3" />
           </button>
-          {/* Profile */}
+
           <div className="flex items-start gap-4 flex-col">
             <div className="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center">
               <span className="text-2xl font-bold text-white">C</span>
@@ -62,7 +62,6 @@ export const SidebarContent = memo(function SidebarContent() {
             </div>
           </div>
 
-          {/* Events */}
           <div>
             <h3 className="font-semibold mb-4">Upcoming events</h3>
             {events.map((event) => (
@@ -70,7 +69,6 @@ export const SidebarContent = memo(function SidebarContent() {
             ))}
           </div>
 
-          {/* Conversion */}
           <div className="rounded-xl p-6 bg-gray-50">
             <h3 className="font-semibold mb-2">Conversion history</h3>
             <p className="text-sm text-gray-600 mb-4">

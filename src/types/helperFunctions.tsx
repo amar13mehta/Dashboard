@@ -85,6 +85,6 @@ export type TActivityType = "sale" | "lead" | "upload" | "email";
 export type TActivityItem = {
   id: string;
   title: string;
-  meta: string; // time or amount
+  meta: string;
   type: TActivityType;
 };

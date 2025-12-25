@@ -8,7 +8,6 @@ import {
   ArrowLeft,
   ArrowUp,
   CalendarDaysIcon,
-  CalendarIcon,
   CheckCircle,
   DollarSign,
   FileText,
@@ -20,12 +19,10 @@ import {
 import IncomeChart, { OrdersChart } from "./charts";
 import { TInvoice, TOrder, TSale, TStatCard } from "../types/helperFunctions";
 
-import Image from "next/image";
 import { OrderItem } from "./order";
 import { StatCard } from "./statCard";
 import { motion } from "framer-motion";
 import { useNavigationStore } from "../store/useNavigationStore";
-import { useState } from "react";
 
 const stats: TStatCard[] = [
   {
@@ -316,7 +313,6 @@ export function DashboardView2() {
       exit={{ opacity: 0, x: 20 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      {/* Back Button */}
       <button
         onClick={navigateToOverview}
         className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
@@ -324,7 +320,6 @@ export function DashboardView2() {
         <ArrowLeft className="w-4 h-4" />
       </button>
 
-      {/* Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {metrics.map((metric, i) => (
           <div
@@ -358,7 +353,6 @@ export function DashboardView2() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Orders Chart */}
         <div className="lg:col-span-2 bg-white rounded-xl 0 p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-lg font-semibold text-gray-900">Orders</h2>
@@ -384,7 +378,6 @@ export function DashboardView2() {
         </div>
       </div>
 
-      {/* Latest Sales */}
       <div className="bg-white rounded-xl border border-gray-200">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center justify-between">
