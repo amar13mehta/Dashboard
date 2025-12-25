@@ -65,9 +65,9 @@ function SidebarComponent() {
       animate={isMobile ? "closed" : isOpen ? "open" : "closed"}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="w-16 h-full flex flex-col justify-between border-r border-gray-200">
+      <div className="w-16 h-full flex flex-col md:justify-between border-r border-gray-200">
         <div>
-          <div className="flex items-center justify-center h-16 ">
+          <div className="flex items-center justify-center h-14 md:h-16 ">
             <Image
               src="/logo.svg"
               alt="Logo"
@@ -84,7 +84,7 @@ function SidebarComponent() {
                 <button
                   key={item.id}
                   onClick={() => setActiveItem(item.id)}
-                  className={`relative p-2.5 rounded-md transition-colors ${
+                  className={`relative p-2 md:p-2.5 rounded-md transition-colors ${
                     activeItem === item.id
                       ? "text-[#5E81F4] bg-[#5E81F4]/10"
                       : "text-gray-600 hover:bg-gray-50"
@@ -93,7 +93,7 @@ function SidebarComponent() {
                   {activeItem === item.id && (
                     <span className="absolute -right-3.5 top-1/2 -translate-y-1/2 h-10 w-0.5 bg-[#5E81F4]" />
                   )}
-                  <Icon className="w-3 h-3" />
+                  <Icon className="w-3.5 h-3.5" />
                   {item.badge && isOpen && !isMobile && (
                     <span className="absolute -top-1 right-1 text-emerald-400 animate-pulse">
                       •
@@ -105,7 +105,7 @@ function SidebarComponent() {
           </nav>
         </div>
 
-        <div className="p-3">
+        <div className="px-3 md:px-3 md:py-3">
           <Image
             src="/logo.svg"
             alt="User"

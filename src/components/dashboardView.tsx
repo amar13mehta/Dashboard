@@ -255,7 +255,7 @@ export function DashboardView1() {
           {invoices.map((invoice) => (
             <div
               key={invoice.id}
-              className="flex items-center justify-between py-4 px-6 hover:bg-gray-50 min-h-20"
+              className="flex items-center justify-between py-4 px-4 md:px-6 hover:bg-gray-50 min-h-20"
             >
               <div className="flex items-center gap-3">
                 <FileText className="md:size-10 size-9 text-[#5E81F4]" />
@@ -354,26 +354,36 @@ export function DashboardView2() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2 bg-white rounded-xl 0 p-4">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-gray-900">Orders</h2>
+          <div className="flex items-center justify-between">
+            <h2 className="text-base md:text-lg font-semibold text-gray-900">
+              Orders
+            </h2>
             <div className="flex gap-2">
-              <button className="px-3 py-1 cursor-pointer text-sm text-gray-600 hover:text-gray-900">
+              <button className="md:block hidden px-3 py-1 cursor-pointer text-sm text-gray-600 hover:text-gray-900">
                 Day
               </button>
-              <button className="px-3 py-1 cursor-pointer text-sm text-gray-600 hover:text-gray-900">
+              <button className="md:block hidden px-3 py-1 cursor-pointer text-sm text-gray-600 hover:text-gray-900">
                 Week
               </button>
-              <button className="px-3 py-1 cursor-pointer text-sm font-medium border border-gray-200 rounded-lg">
+              <button className=" md:block hidden px-3 py-1 cursor-pointer text-sm font-medium border border-gray-200 rounded-lg">
                 Month
+              </button>
+
+              <button className="md:hidden flex items-center w-10 justify-center h-9 text-sm font-medium  rounded-lg bg-[#F5F5FA] text-[#8181A5]">
+                <CalendarDaysIcon className="size-4" />
               </button>
             </div>
           </div>
           <OrdersChart />
         </div>
         <div className="bg-white rounded-xl border border-gray-200 p-4">
-          <h2 className="text-lg font-semibold text-gray-900 mb-6">
-            Planned Income
-          </h2>
+          <div className="flex justify-between items-center">
+            <h2 className="text-base md:text-lg font-semibold text-gray-900 ">
+              Planned Income
+            </h2>
+            <CalendarDaysIcon className="size-4 text-[#8181A5]" />
+          </div>
+
           <IncomeChart />
         </div>
       </div>
@@ -381,18 +391,21 @@ export function DashboardView2() {
       <div className="bg-white rounded-xl border border-gray-200">
         <div className="p-4 border-b border-gray-200">
           <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold text-gray-900">
+            <h2 className="text-base md:text-lg font-semibold text-gray-900">
               Latest sales
             </h2>
             <div className="flex gap-2">
-              <button className="px-3 py-1 text-sm text-gray-600 hover:text-gray-900">
+              <button className="px-3 py-1 md:block hidden text-sm text-gray-600 hover:text-gray-900">
                 Day
               </button>
-              <button className="px-3 py-1 text-sm text-gray-600 hover:text-gray-900">
+              <button className="px-3 py-1 text-sm md:block hidden text-gray-600 hover:text-gray-900">
                 Week
               </button>
-              <button className="px-3 py-1 text-sm font-medium  rounded-lg ">
+              <button className="px-3 py-1 md:block hidden text-sm font-medium border border-gray-200 rounded-lg ">
                 Month
+              </button>
+              <button className="md:hidden flex items-center w-10 justify-center h-9 text-sm font-medium  rounded-lg bg-[#F5F5FA] text-[#8181A5]">
+                <CalendarDaysIcon className="size-4" />
               </button>
             </div>
           </div>
@@ -568,8 +581,8 @@ export function DashboardView2() {
                         </div>
                       </div>
 
-                      <div className="p-3 bg-white rounded-lg">
-                        <p className="text-xs text-gray-500 mb-2">Status</p>
+                      <div className="p-3 bg-white rounded-lg flex justify-between items-center">
+                        <p className="text-xs text-gray-500 ">Status</p>
                         <span
                           className={`inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full ${
                             sale.status === "Shipped"

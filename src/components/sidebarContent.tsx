@@ -39,7 +39,7 @@ export const SidebarContent = memo(function SidebarContent() {
       {isOpen && (
         <motion.div
           key="sidebar-content"
-          className="w-80 px-6 py-8 space-y-6 bg-white h-screen absolute top-0 left-16 md:left-0 border-r border-gray-200 z-10 md:relative "
+          className="w-72 md:w-80 p-4 md:px-6 md:py-8 space-y-6 bg-white h-screen absolute top-0 left-16 md:left-0 border-r border-gray-200 z-10 md:relative "
           initial={{ opacity: 0, x: -12 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -8 }}
@@ -69,12 +69,14 @@ export const SidebarContent = memo(function SidebarContent() {
             ))}
           </div>
 
-          <div className="rounded-xl p-6 bg-gray-50">
-            <h3 className="font-semibold mb-2">Conversion history</h3>
-            <p className="text-sm text-gray-600 mb-4">
+          <div className="rounded-xl p-4 md:p-6 bg-gray-50">
+            <h3 className="text-sm md:text-base font-semibold mb-2">
+              Conversion history
+            </h3>
+            <p className="text-xs md:text-sm text-gray-600 mb-4">
               Week to week performance
             </p>
-            <div className="h-24 flex items-end gap-1">
+            <div className=" h-16 md:h-24 flex items-end gap-1">
               {[30, 50, 60, 45, 70, 55].map((h, i) => (
                 <div
                   key={i}
